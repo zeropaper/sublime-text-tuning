@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[
+(function(factory, global){
+  'use strict';
+  /* jshint node: true */
+  /* global define: false */
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = factory();
+  }
+
+  else if (typeof define === 'function') {
+    define([], factory);
+  }
+
+  else {
+    // global.myModule = factory();
+  }
+}(function() {
+  'use strict';
+
+  // Write something clever...
+  var myModule = {};
+
+  return myModule;
+}, this));
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <!-- <tabTrigger>hello</tabTrigger> -->
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>
